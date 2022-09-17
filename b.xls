@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+ <html>
+ <body>
+ <h2>student details</h2>
+ <table border="1">
+ <tr bgcolor="#fffff">
+ <th>name</th>
+ <th>branch</th>
+ <th>Roll number</th>
+ <th>dob</th>
+Reg No :
+KGiSL-IIM
+Page No:
+ <th>Hostaller</th>
+ <th>age</th>
+ <th>city</th>
+ </tr>
+ <xsl:for-each select="students/student">
+ <tr>
+ <td><xsl:value-of select="name"/></td>
+ <td><xsl:value-of select="branch"/></td>
+ <td><xsl:value-of select="Rollnumber"/></td>
+ <td><xsl:value-of select="dob"/></td>
+ <td><xsl:value-of select="hostaller"/></td>
+ <td><xsl:value-of select="age"/></td>
+ <td><xsl:value-of select="city"/></td>
+ </tr>
+ </xsl:for-each>
+ </table>
+ </body>
+ </html>
+</xsl:template>
+</xsl:stylesheet>
